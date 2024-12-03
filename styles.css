@@ -185,6 +185,38 @@ section {
     background-color: rgba(255, 182, 193, 0.15);
 }
 
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-secondary);
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 25px rgba(255, 182, 193, 0.5);
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
 /* Links and Buttons */
 a {
     color: var(--color-accent);
@@ -236,6 +268,21 @@ button:hover {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-info {
+        justify-content: center;
     }
 }
 
